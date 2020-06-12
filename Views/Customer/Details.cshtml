@@ -1,0 +1,31 @@
+﻿@model MVCDemoApp.Models.Customer
+
+@{
+    ViewData["Title"] = "Details";
+}
+<h2>Details</h2>
+<div>
+    <h4>Employees</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Accountno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Branchname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IFSC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Accountno">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
